@@ -1,0 +1,21 @@
+{
+  "name": "pure-insights-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "REST + WebSocket backend for the Pure Insights Command Centre",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv-parse": "^5.5.6",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "ws": "^8.17.1"
+  }
+}

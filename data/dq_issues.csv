@@ -1,0 +1,11 @@
+issue,column,rows_affected,action,pct_of_rows
+Orphaned report (owner 'nan'),owner_email,128,"Flag is_orphaned, keep row, show in Orphaned Reports view",6.4
+Orphaned report ('ORPHANED_REPORT'),owner_email,117,Same flag as above; two encodings of the same condition,5.9
+Negative Snowflake credits,snowflake_credits_consumed,24,"Keep row, null the value in credits_clean, exclude from cost sums",1.2
+Refresh status UNKNOWN,last_refresh_status,100,Own status; not counted as success or failure,5.0
+Load time 15-30s (warning tier),avg_load_time_sec,580,"Alert, severity=warning, with per-report cooldown",29.0
+Load time above 30s (critical),avg_load_time_sec,910,"Alert, severity=critical",45.5
+Zero monthly views,monthly_active_views,4,Per-view metrics set to NULL (no divide-by-zero),0.2
+Peak concurrent users > monthly views,concurrent_user_peak,93,Flag as suspicious; keep values,4.6
+AWS cost per view above 95th percentile (> 2.64 USD),aws_hosting_cost_usd,100,Flag as cost-vs-usage mismatch for review,5.0
+Report IDs repeated across rows,report_id,1900,Not deleted: treated as snapshots (snapshot_seq). See notebook assumption.,95.0
